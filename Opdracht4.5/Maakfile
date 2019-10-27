@@ -1,0 +1,15 @@
+.PHONY: build clean generate
+
+build: main.out
+
+clean:
+	$(rm) main.out generator.o
+
+main.out : generator.o
+	g++ generator.o -o main.out
+
+generate: build
+	./main.out
+
+generator.o : makeCompressedText.cpp
+	g++ -c makeCompressedText.cpp -o generator.o
