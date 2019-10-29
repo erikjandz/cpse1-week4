@@ -16,7 +16,7 @@ HEADRES += match.hpp
 SOURCES += compressed.asm
 SOURCES += decompress.asm
 
-compressed.asm:
+compressed.asm:	wilhelmus.txt
 		make -f Maakfile generate
 
 # other places to look for files for this project
